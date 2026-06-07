@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>MAHA 🌸 — something important</title>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Nunito:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+
+:root{
+  --pink:#E8527F;
+  --pink-deep:#B03060;
+  --pink-light:#FDE8F2;
+  --pink-mid:#F9C5D8;
+  --cream:#FFF8FB;
+  --text:#2D1020;
+  --muted:#8A4060;
+  --card:#FFFFFF;
+  --border:#F4BACE;
+}
+
+html{
+  height:100%;
+  background: #FDE8F2;
+}
+
+body{
+  font-family:'Nunito',sans-serif;
+  min-height:100vh;
+  min-height:100dvh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  padding:16px 14px 24px;
+  background: #FDE8F2;
+  position:relative;
+  overflow-x:hidden;
+}
+
+/* ── PETALS ── */
+.petal{position:fixed;pointer-events:none;z-index:0;animation:petalFall linear infinite;opacity:0;}
+@keyframes petalFall{
+  0%  {transform:translateY(-30px) rotate(0deg) scale(1);opacity:0;}
+  8%  {opacity:.6;}
+  90% {opacity:.35;}
+  100%{transform:translateY(105vh) rotate(400deg) scale(.6);opacity:0;}
+}
+
+/* ── APP SHELL ── */
+.app{width:100%;max-width:420px;position:relative;z-index:1;}
+
+/* ── DOTS ── */
+.dots{display:flex;gap:7px;justify-content:center;margin-bottom:18px;min-height:9px;}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--border);transition:background .35s,transform .35s;}
+.dot.on{background:var(--pink);transform:scale(1.55);}
+
+/* ── CARD ── */
+.card{
+  background:var(--card);
+  border:1.5px solid var(--border);
+  border-radius:28px;
+  padding:28px 22px 24px;
+  width:100%;
+  box-shadow:0 6px 32px rgba(232,82,127,.13);
+  animation:cardIn .55s cubic-bezier(.34,1.46,.64,1) both;
+}
+@keyframes cardIn{
+  from{opacity:0;transform:translateY(38px) scale(.93);}
+  to  {opacity:1;transform:translateY(0)    scale(1);}
+}
+
+/* ── EMOJIS ── */
+.hero-emoji{font-size:72px;display:block;text-align:center;margin-bottom:14px;}
+.bop {animation:bop 2s ease-in-out infinite;}
+.spin{animation:spinA 2.5s linear infinite;}
+.pulse{animation:pulseA .95s ease-in-out infinite;}
+.float{animation:floatA 2.3s ease-in-out infinite;}
+.shake{animation:shakeA .7s ease-in-out infinite;}
+.tada{animation:tadaA .8s ease both;}
+
+@keyframes bop   {0%,100%{transform:translateY(0) rotate(-4deg)scale(1);}50%{transform:translateY(-15px) rotate(4deg)scale(1.1);}}
+@keyframes spinA {to{transform:rotate(360deg);}}
+@keyframes pulseA{0%,100%{transform:scale(1);}50%{transform:scale(1.25);}}
+@keyframes floatA{0%,100%{transform:translateY(0);}50%{transform:translateY(-18px);}}
+@keyframes shakeA{0%,100%{transform:rotate(-6deg);}50%{transform:rotate(6deg);}}
+@keyframes tadaA {0%{transform:scale(.6) rotate(-6deg);opacity:0;}60%{transform:scale(1.15) rotate(3deg);}80%{transform:scale(.95);}100%{transform:scale(1);opacity:1;}}
+
+/* ── TYPOGRAPHY ── */
+.tag{
+  display:inline-block;
+  background:var(--pink-light);
+  color:var(--pink-deep);
+  border:1px solid var(--pink-mid);
+  border-radius:50px;
+  font-size:10.5px;font-weight:900;
+  padding:3px 13px;
+  letter-spacing:.07em;
+  text-transform:uppercase;
+  margin-bottom:10px;
+}
+.headline{
+  font-family:'Pacifico',cursive;
+  font-size:clamp(19px,5.5vw,25px);
+  color:var(--pink);
+  line-height:1.38;
+  margin-bottom:8px;
+  text-align:center;
+}
+.sub{
+  font-size:13.5px;line-height:1.78;
+  color:var(--muted);
+  margin-bottom:16px;
+  text-align:center;
+}
+
+/* ── LIST CARD ── */
+.lcard{
+  background:var(--pink-light);
+  border:1.5px dashed var(--border);
+  border-radius:18px;
+  padding:14px 15px;
+  margin-bottom:16px;
+  text-align:left;
+}
+.li{display:flex;gap:10px;align-items:flex-start;font-size:13px;line-height:1.68;color:var(--text);margin-bottom:10px;}
+.li:last-child{margin-bottom:0;}
+.li-ic{font-size:19px;flex-shrink:0;margin-top:1px;}
+
+/* ── DIVIDER ── */
+.div{display:flex;align-items:center;gap:8px;margin:12px 0;color:var(--border);font-size:13px;}
+.div::before,.div::after{content:'';flex:1;height:1px;background:var(--border);}
+
+/* ── BUTTONS ── */
+.btn-pink{
+  width:100%;background:var(--pink);color:#fff;border:none;
+  border-radius:50px;padding:15px 20px;
+  font-family:'Nunito',sans-serif;font-size:16px;font-weight:900;
+  cursor:pointer;
+  box-shadow:0 4px 18px rgba(232,82,127,.32);
+  transition:transform .15s,background .15s;
+  margin-top:4px;
+  -webkit-tap-highlight-color:transparent;
+}
+.btn-pink:active{transform:scale(.96);background:var(--pink-deep);}
+
+.btn-ghost{
+  width:100%;background:transparent;
+  color:var(--muted);border:1.5px solid var(--border);
+  border-radius:50px;padding:12px 20px;
+  font-family:'Nunito',sans-serif;font-size:13.5px;
+  cursor:pointer;
+  transition:transform .18s cubic-bezier(.34,1.56,.64,1),color .15s;
+  margin-top:10px;
+  display:block;
+  -webkit-tap-highlight-color:transparent;
+}
+.btn-ghost:active{color:var(--pink);}
+
+/* ── NO BUTTON SPECIAL ── */
+#noBtn{display:inline-block;width:auto;padding:11px 24px;}
+
+.no-msg{
+  font-size:12px;color:var(--pink);font-style:italic;
+  min-height:18px;margin-top:8px;text-align:center;
+  animation:fadeUp .3s ease both;
+}
+
+/* ── CONFETTI ROW ── */
+.confetti{
+  font-size:26px;letter-spacing:4px;
+  text-align:center;margin-bottom:12px;
+  animation:shimmer 1.3s ease-in-out infinite;
+}
+@keyframes shimmer{0%,100%{opacity:1;}50%{opacity:.55;}}
+
+/* ── FLOATING HEARTS ── */
+.hf{
+  position:fixed;pointer-events:none;z-index:999;
+  animation:hfRise 2.2s ease-in both;
+}
+@keyframes hfRise{
+  0%  {opacity:1;transform:translateY(0) scale(1);}
+  100%{opacity:0;transform:translateY(-200px) scale(.25);}
+}
+
+/* ── CHAT BUBBLE (for the "message" slide) ── */
+.bubble-wrap{width:100%;margin-bottom:14px;}
+.bubble{
+  display:inline-block;max-width:85%;
+  border-radius:18px;padding:10px 15px;
+  font-size:13.5px;line-height:1.65;
+  text-align:left;margin-bottom:6px;
+}
+.b-them{background:var(--pink-light);color:var(--text);border-bottom-left-radius:4px;float:left;clear:both;}
+.b-me  {background:var(--pink);color:#fff;border-bottom-right-radius:4px;float:right;clear:both;}
+.clearfix::after{content:'';display:table;clear:both;}
+.chat-name{font-size:11px;color:var(--muted);margin-bottom:3px;display:block;}
+
+/* ── PROGRESS BAR ── */
+.progress-bar{
+  width:100%;height:4px;
+  background:var(--border);
+  border-radius:4px;
+  margin-bottom:14px;
+  overflow:hidden;
+}
+.progress-fill{
+  height:100%;background:var(--pink);
+  border-radius:4px;
+  transition:width .5s cubic-bezier(.34,1.2,.64,1);
+}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(5px);}to{opacity:1;transform:translateY(0);}}
+</style>
+</head>
+<body>
+
+<div id="petals"></div>
+
+<div class="app">
+  <div class="progress-bar"><div class="progress-fill" id="prog" style="width:0%"></div></div>
+  <div class="dots" id="dots"></div>
+
+  <!-- S0: Opening -->
+  <div id="s0" class="card" style="text-align:center;">
+    <span class="hero-emoji bop">💌</span>
+    <div class="headline">Hey MAHA,<br>you don't know me… yet 👀</div>
+    <div class="sub">I know this is random.<br>I know we've never spoken.<br>But I saw you, and I just… couldn't not try. 🥺</div>
+    <button class="btn-pink" onclick="next()">Okay, I'm curious… ➜</button>
+  </div>
+
+  <!-- S1: The Moment -->
+  <div id="s1" class="card" style="display:none;text-align:center;">
+    <div class="tag">The moment everything changed</div>
+    <span class="hero-emoji shake">🫣</span>
+    <div class="headline">I saw you.<br>And my brain just… stopped.</div>
+    <div class="lcard">
+      <div class="li"><span class="li-ic">👁️</span><span>It was a completely random moment. You weren't even doing anything special. That's what got me.</span></div>
+      <div class="li"><span class="li-ic">🧍</span><span>I stood there like an absolute fool, rehearsing things to say, and said absolutely nothing. Classic.</span></div>
+      <div class="li"><span class="li-ic">💭</span><span>But I thought about it way too much afterward. Which means I had to do <em>something</em>.</span></div>
+      <div class="li"><span class="li-ic">📲</span><span>So here I am. Building a whole app. For a girl I've never spoken to. No regrets.</span></div>
+    </div>
+    <button class="btn-pink" onclick="next()">This guy is unhinged… next ➜</button>
+  </div>
+
+  <!-- S2: What I noticed -->
+  <div id="s2" class="card" style="display:none;text-align:center;">
+    <div class="tag">What I noticed — in 0.3 seconds</div>
+    <span class="hero-emoji spin">🔭</span>
+    <div class="headline">You have a presence.<br>The kind you can't fake.</div>
+    <div class="lcard">
+      <div class="li"><span class="li-ic">🌟</span><span>The way you carry yourself — there's this quiet confidence that most people spend years trying to have.</span></div>
+      <div class="li"><span class="li-ic">😄</span><span>Something about you just looked genuinely warm. Like you'd be the kind of person worth knowing.</span></div>
+      <div class="li"><span class="li-ic">✨</span><span>And honestly? MAHA is a beautiful name. It means "beautiful eyes" in Arabic. Very fitting, it turns out.</span></div>
+      <div class="li"><span class="li-ic">🎯</span><span>I could be totally wrong about everything. But I'd rather try and find out than always wonder.</span></div>
+    </div>
+    <button class="btn-pink" onclick="next()">Okay he did his research ➜</button>
+  </div>
+
+  <!-- S3: Imaginary chat -->
+  <div id="s3" class="card" style="display:none;">
+    <div class="tag" style="display:block;text-align:center;">The conversation I imagined</div>
+    <div style="font-size:11px;color:var(--muted);text-align:center;margin-bottom:12px;">(the one that should totally happen in real life)</div>
+    <div class="bubble-wrap clearfix">
+      <span class="chat-name" style="float:left;padding-left:4px;">MAHA 🌸</span>
+      <div class="bubble b-them">wait, you built an entire app… for me??</div>
+      <div class="bubble b-me">in my defense, I had a lot of feelings and limited options 🥺</div>
+      <div class="bubble b-them">this is the most extra thing anyone has ever done for me</div>
+      <div class="bubble b-me">is that a good extra or a bad extra</div>
+      <div class="bubble b-them">…it's a cute extra. I'll allow it 😭</div>
+      <div class="bubble b-me">so you'll give me a chance? 👀</div>
+      <div class="bubble b-them" style="animation:tadaA .6s .2s ease both;">keep reading first 😌</div>
+    </div>
+    <button class="btn-pink" onclick="next()">Keep reading ➜</button>
+  </div>
+
+  <!-- S4: The promise -->
+  <div id="s4" class="card" style="display:none;text-align:center;">
+    <div class="tag">What I'm actually offering</div>
+    <span class="hero-emoji float">🎁</span>
+    <div class="headline">I'm not promising<br>perfect. Just this:</div>
+    <div class="lcard">
+      <div class="li"><span class="li-ic">😂</span><span>Someone who will make you laugh, probably at the wrong moments. Often at himself. Definitely both.</span></div>
+      <div class="li"><span class="li-ic">🛡️</span><span>Someone in your corner. Genuinely, without an agenda. Just… rooting for you.</span></div>
+      <div class="li"><span class="li-ic">🍜</span><span>Food. I will always be down for food. This is non-negotiable and extremely important.</span></div>
+      <div class="li"><span class="li-ic">🌱</span><span>A chance to turn a random moment into something that actually matters. That's all I'm asking.</span></div>
+    </div>
+    <button class="btn-pink" onclick="next()">One more slide ➜</button>
+  </div>
+
+  <!-- S5: THE QUESTION -->
+  <div id="s5" class="card" style="display:none;text-align:center;">
+    <span class="hero-emoji pulse">💍</span>
+    <div class="headline" style="font-size:clamp(20px,6vw,27px);">So MAHA…<br>will you give me<br>a chance? 🥺</div>
+    <div class="sub">Not asking for forever.<br>Just a first conversation.<br>A coffee. A walk. Literally anything. 😅</div>
+    <div class="div">💕</div>
+    <button class="btn-pink" style="font-size:18px;padding:17px;" onclick="sayYes()">💕 Yes, let's talk!</button>
+    <div style="text-align:center;margin-top:10px;">
+      <button class="btn-ghost" id="noBtn" style="width:auto;padding:11px 26px;" onmouseover="moveNo()" onclick="moveNo()">hmm… I'm not sure 🤔</button>
+    </div>
+    <div class="no-msg" id="noMsg"></div>
+  </div>
+
+  <!-- S6: CELEBRATION -->
+  <div id="s6" class="card" style="display:none;text-align:center;">
+    <div class="confetti">🎉💕🌸✨💍🎊</div>
+    <span class="hero-emoji" style="font-size:78px;animation:bop .9s ease-in-out infinite;">🥳</span>
+    <div class="headline" style="font-size:clamp(21px,6vw,28px);">She said yes!!<br>This is real life!! 💕</div>
+    <div class="sub">MAHA, I have no idea where this goes.<br>But I'm really glad you're curious enough to find out.<br>So am I. 🌸</div>
+    <div class="lcard" style="text-align:center;background:var(--pink-light);">
+      <div style="font-family:'Pacifico',cursive;color:var(--pink);font-size:16px;margin-bottom:8px;">first steps:</div>
+      <div class="li" style="justify-content:center;font-size:14px;"><span class="li-ic">☕</span><span>coffee or chai — you pick</span></div>
+      <div class="li" style="justify-content:center;font-size:14px;"><span class="li-ic">💬</span><span>a proper first conversation</span></div>
+      <div class="li" style="justify-content:center;font-size:14px;margin-bottom:0;"><span class="li-ic">🌸</span><span>let's just see where it goes</span></div>
+    </div>
+    <button class="btn-pink" onclick="restart()" style="margin-top:4px;">replay 🔁</button>
+  </div>
+
+</div>
+
+<script>
+var cur=0, total=6, noPresses=0;
+var noMsgs=[
+  "The 'not sure' button is just decoration. 🌸",
+  "Your thumb slipped. Understandable. Try again!",
+  "I'm still here. Still hopeful. Very patient. 🥺",
+  "MAHA. MAHA. Come onnnn.",
+  "Fun fact: the yes button works perfectly. 💕",
+  "I'll wait here forever. It's fine. I'm fine. 😌",
+  "Okay but coffee though. Just coffee. 🥺",
+  "I deployed imaginary puppies to stare at you. 🐶",
+];
+
+// petals
+var symbols=['🌸','🌺','🌼','💮','🌷','✿'];
+var petDiv=document.getElementById('petals');
+for(var i=0;i<16;i++){
+  (function(n){
+    var el=document.createElement('div');
+    el.className='petal';
+    el.textContent=symbols[n%symbols.length];
+    el.style.left=(Math.random()*100)+'vw';
+    el.style.fontSize=(11+Math.random()*11)+'px';
+    el.style.animationDuration=(8+Math.random()*9)+'s';
+    el.style.animationDelay=(Math.random()*12)+'s';
+    petDiv.appendChild(el);
+  })(i);
+}
+
+function buildDots(){
+  var d=document.getElementById('dots');
+  d.innerHTML='';
+  for(var i=0;i<total;i++){
+    var el=document.createElement('div');
+    el.className='dot'+(i===cur?' on':'');
+    d.appendChild(el);
+  }
+  document.getElementById('prog').style.width=Math.round((cur/total)*100)+'%';
+  if(cur===total){d.style.display='none';}
+  else{d.style.display='flex';}
+}
+
+function showSlide(n){
+  var prev=document.getElementById('s'+cur);
+  prev.style.display='none';
+  cur=n;
+  var next=document.getElementById('s'+cur);
+  next.style.display='block';
+  next.style.animation='none';
+  void next.offsetWidth;
+  next.style.animation='cardIn .55s cubic-bezier(.34,1.46,.64,1) both';
+  buildDots();
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function next(){showSlide(cur+1);}
+
+function sayYes(){
+  launchHearts();
+  showSlide(6);
+}
+
+function moveNo(){
+  var btn=document.getElementById('noBtn');
+  var mx=100,my=50;
+  var rx=(Math.random()*mx*2)-mx;
+  var ry=(Math.random()*my*2)-my;
+  btn.style.transform='translate('+rx+'px,'+ry+'px)';
+  btn.style.transition='transform .2s cubic-bezier(.34,1.56,.64,1)';
+  noPresses++;
+  var el=document.getElementById('noMsg');
+  el.textContent=noMsgs[Math.min(noPresses-1,noMsgs.length-1)];
+  el.style.animation='none';void el.offsetWidth;
+  el.style.animation='fadeUp .35s ease both';
+}
+
+function launchHearts(){
+  var syms=['💕','💖','💗','💝','🌸','✨','💓','🌺','💞'];
+  for(var i=0;i<20;i++){
+    (function(idx){
+      setTimeout(function(){
+        var h=document.createElement('span');
+        h.className='hf';
+        h.textContent=syms[Math.floor(Math.random()*syms.length)];
+        h.style.left=(5+Math.random()*88)+'vw';
+        h.style.bottom=(5+Math.random()*25)+'vh';
+        h.style.fontSize=(16+Math.random()*18)+'px';
+        h.style.animationDuration=(1.7+Math.random()*1.4)+'s';
+        document.body.appendChild(h);
+        setTimeout(function(){if(h.parentNode)h.parentNode.removeChild(h);},3600);
+      },idx*110);
+    })(i);
+  }
+}
+
+function restart(){
+  noPresses=0;
+  var nb=document.getElementById('noBtn');
+  nb.style.transform='';
+  document.getElementById('noMsg').textContent='';
+  showSlide(0);
+}
+
+buildDots();
+</script>
+</body>
+</html>
