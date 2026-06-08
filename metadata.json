@@ -1,0 +1,6 @@
+{
+  "name": "M. Mehaal Khattak AI Agency",
+  "description": "Futuristic AI Agency offering AI Call Agents, Automations, Standard and 3D Web Development.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

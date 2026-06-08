@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;850&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+Arabic:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-display: "Cormorant Garamond", "Space Grotesk", serif;
+  --font-urdu: "Noto Sans Arabic", "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  
+  /* Premium Liquid iOS Palette */
+  --color-neon-cyan: #00d2ff;     /* iOS Crystal Aqua-Cyan */
+  --color-neon-purple: #7075ff;   /* iOS Watery Fluid Blue-Indigo */
+  --color-neon-pink: #ff5e7e;     /* iOS Liquid Pink-Rose */
+  --color-neon-green: #30d158;    /* iOS Neon Fresh Green */
+}
+
+/* RTL Urdu specific font adjustments */
+.font-urdu {
+  font-family: var(--font-urdu) !important;
+}
+
+/* Luxurious Watery/Frosted Apple iOS Glass UI effects */
+.glass-panel {
+  background: rgba(10, 15, 30, 0.45);
+  backdrop-filter: blur(36px) saturate(220%);
+  -webkit-backdrop-filter: blur(36px) saturate(220%);
+  border: 1px solid rgba(255, 255, 255, 0.08); /* Ultra-thin crystal line */
+  box-shadow: 0 16px 50px -10px rgba(0, 0, 0, 0.55), inset 0 1px 1px rgba(255, 255, 255, 0.1);
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel-accent {
+  background: rgba(0, 210, 255, 0.02);
+  backdrop-filter: blur(36px) saturate(220%);
+  -webkit-backdrop-filter: blur(36px) saturate(220%);
+  border: 1px solid rgba(0, 210, 255, 0.15);
+  box-shadow: 0 20px 60px -15px rgba(0, 0, 0, 0.55), inset 0 1px 1px rgba(255, 255, 255, 0.08);
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel-purple {
+  background: rgba(112, 117, 255, 0.02);
+  backdrop-filter: blur(36px) saturate(220%);
+  -webkit-backdrop-filter: blur(36px) saturate(220%);
+  border: 1px solid rgba(112, 117, 255, 0.15);
+  box-shadow: 0 20px 60px -15px rgba(0, 0, 0, 0.55), inset 0 1px 1px rgba(255, 255, 255, 0.08);
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* iOS Spring/Fluid transitions */
+.transition-ios {
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Premium smooth tactile feedback shadow-glow */
+.glow-cyan {
+  text-shadow: 0 0 25px rgba(0, 210, 255, 0.25);
+}
+
+.glow-purple {
+  text-shadow: 0 0 25px rgba(112, 117, 255, 0.2);
+}
+
+.glow-btn-cyan {
+  box-shadow: 0 10px 30px -10px rgba(0, 210, 255, 0.3);
+}
+
+.glow-btn-purple {
+  box-shadow: 0 10px 30px -10px rgba(112, 117, 255, 0.3);
+}
+
+/* Watery organic background shaders & griddings */
+.cyber-grid {
+  background-size: 100px 100px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.012) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.012) 1px, transparent 1px);
+}
+
+/* Floating organic background liquid blobs */
+.fluid-blob-one {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(0, 210, 255, 0.07) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(110px);
+  z-index: 0;
+  pointer-events: none;
+  animation: drift-slow 28s infinite alternate ease-in-out;
+}
+
+.fluid-blob-two {
+  position: absolute;
+  width: 650px;
+  height: 650px;
+  background: radial-gradient(circle, rgba(112, 117, 255, 0.06) 0%, transparent 75%);
+  border-radius: 50%;
+  filter: blur(130px);
+  z-index: 0;
+  pointer-events: none;
+  animation: drift-reverse 35s infinite alternate ease-in-out;
+}
+
+.fluid-blob-three {
+  position: absolute;
+  width: 550px;
+  height: 550px;
+  background: radial-gradient(circle, rgba(255, 94, 126, 0.04) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(120px);
+  z-index: 0;
+  pointer-events: none;
+  animation: drift-erratic 32s infinite alternate ease-in-out;
+}
+
+@keyframes drift-slow {
+  0% { transform: translate(-80px, -40px) scale(0.9); }
+  50% { transform: translate(120px, 80px) scale(1.15); }
+  100% { transform: translate(-30px, 160px) scale(0.95); }
+}
+
+@keyframes drift-reverse {
+  0% { transform: translate(150px, 100px) scale(1.1); }
+  50% { transform: translate(-100px, -60px) scale(0.85); }
+  100% { transform: translate(80px, -150px) scale(1.05); }
+}
+
+@keyframes drift-erratic {
+  0% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(-150px, 120px) scale(1.2); }
+  66% { transform: translate(120px, -100px) scale(0.9); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+
+/* Smooth customized WebKit scrollbars for luxury browser rendering */
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #05060b;
+}
+::-webkit-scrollbar-thumb {
+  background: #1c1e28;
+  border-radius: 99px;
+  border: 2px solid #05060b;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00d2ff;
+}
+
+html, body {
+  background-color: #060913; /* Deep macOS/iOS Liquid Obsidian Sapphire background */
+  color: #eeeeee;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}

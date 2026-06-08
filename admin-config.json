@@ -1,0 +1,186 @@
+{
+  "prices": {
+    "ai-call-agent": 30000,
+    "ai-automation": 20000,
+    "website-building": 10000,
+    "3d-website": 25000,
+    "ai-automation-course": 15000,
+    "p0": 15000,
+    "p1": 10000,
+    "p2": 20000,
+    "p3": 25000,
+    "p4": 30000
+  },
+  "metrics": {
+    "totalVisitors": 3,
+    "totalTimeSpent": 17570,
+    "sessions": [
+      {
+        "id": "s_1hwxc5wq21rmq22xh2b",
+        "ip": "223.123.88.203",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36",
+        "startedAt": "2026-06-06T08:17:16.310Z",
+        "lastHeartbeatAt": "2026-06-06T10:00:54.976Z",
+        "duration": 8140
+      },
+      {
+        "id": "s_puf8qq1tblmq3jrk36",
+        "ip": "223.123.97.134",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36",
+        "startedAt": "2026-06-07T08:56:28.513Z",
+        "lastHeartbeatAt": "2026-06-07T10:30:57.609Z",
+        "duration": 9290
+      },
+      {
+        "id": "s_w6di6g7x7anmq3kourw",
+        "ip": "223.123.94.112",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36",
+        "startedAt": "2026-06-07T09:22:14.901Z",
+        "lastHeartbeatAt": "2026-06-07T09:23:48.219Z",
+        "duration": 140
+      }
+    ],
+    "recordings": [
+      {
+        "id": "rec_gysj12t",
+        "sessionId": "s_puf8qq1tblmq3jrk36",
+        "filename": "rec_s_puf8qq1tblmq3jrk36_1780824700494.webm",
+        "timestamp": "2026-06-07T09:30:37.827Z",
+        "path": "/api/recordings/rec_s_puf8qq1tblmq3jrk36_1780824700494.webm"
+      },
+      {
+        "id": "rec_p10knkx",
+        "sessionId": "s_puf8qq1tblmq3jrk36",
+        "filename": "rec_s_puf8qq1tblmq3jrk36_1780825195482.webm",
+        "timestamp": "2026-06-07T09:39:20.319Z",
+        "path": "/api/recordings/rec_s_puf8qq1tblmq3jrk36_1780825195482.webm"
+      },
+      {
+        "id": "rec_ywzaxuc",
+        "sessionId": "s_puf8qq1tblmq3jrk36",
+        "filename": "rec_s_puf8qq1tblmq3jrk36_1780825718135.webm",
+        "timestamp": "2026-06-07T09:47:35.864Z",
+        "path": "/api/recordings/rec_s_puf8qq1tblmq3jrk36_1780825718135.webm"
+      },
+      {
+        "id": "rec_gf9iou3",
+        "sessionId": "s_puf8qq1tblmq3jrk36",
+        "filename": "rec_s_puf8qq1tblmq3jrk36_1780826580804.webm",
+        "timestamp": "2026-06-07T10:01:52.471Z",
+        "path": "/api/recordings/rec_s_puf8qq1tblmq3jrk36_1780826580804.webm"
+      },
+      {
+        "id": "rec_vmuxan6",
+        "sessionId": "s_puf8qq1tblmq3jrk36",
+        "filename": "rec_s_puf8qq1tblmq3jrk36_1780827793446.webm",
+        "timestamp": "2026-06-07T10:22:35.949Z",
+        "path": "/api/recordings/rec_s_puf8qq1tblmq3jrk36_1780827793446.webm"
+      },
+      {
+        "id": "rec_749ookq",
+        "sessionId": "s_puf8qq1tblmq3jrk36",
+        "filename": "rec_s_puf8qq1tblmq3jrk36_1780828029734.webm",
+        "timestamp": "2026-06-07T10:26:32.817Z",
+        "path": "/api/recordings/rec_s_puf8qq1tblmq3jrk36_1780828029734.webm"
+      }
+    ],
+    "clientInquiries": [],
+    "questionsLogged": [
+      {
+        "id": "q_z0v0w2n",
+        "sessionId": "s_puf8qq1tblmq3jrk36",
+        "question": "ہیلو",
+        "answer": "السلام علیکم! میں میہال خٹک کا اے آئی سیلز نمائندہ ہوں۔ میں آپ کے کاروبار کو بڑھانے میں کس طرح مدد کر سکتا ہوں؟ کیا آپ اپنے کاروبار کے لیے آٹومیشن یا ویب سائٹ بنوانا چاہتے ہیں؟",
+        "unanswered": false,
+        "timestamp": "2026-06-07T09:44:49.178Z"
+      },
+      {
+        "id": "q_bhhednf",
+        "sessionId": "s_puf8qq1tblmq3jrk36",
+        "question": "میں ویب سائٹ بنانا چاہتا ہوں",
+        "answer": "میہال خٹک کی ٹیم آپ کے لیے ایک بہترین اور پروفیشنل ویب سائٹ تیار کر سکتی ہے۔ کیا آپ اپنے کاروبار کے لیے ویب سائٹ بنوانا چاہتے ہیں یا کسی پرسنل پورٹ فولیو کے لیے؟",
+        "unanswered": false,
+        "timestamp": "2026-06-07T09:45:10.892Z"
+      },
+      {
+        "id": "q_4z0izaa",
+        "sessionId": "s_puf8qq1tblmq3jrk36",
+        "question": "باہر کے لئے بنانا چاہتا ہوں",
+        "answer": "بہت اچھا! کیا آپ بیرون ملک مارکیٹ کے لیے کوئی ویب سائٹ بنوانا چاہتے ہیں یا کوئی آٹومیشن سسٹم؟ آپ کس قسم کا کاروبار چلاتے ہیں؟",
+        "unanswered": false,
+        "timestamp": "2026-06-07T09:45:40.001Z"
+      },
+      {
+        "id": "q_f477w5r",
+        "sessionId": "s_puf8qq1tblmq3jrk36",
+        "question": "میں ڈینٹل کا کاروبار چلاتا ہوں مجھے اپنے لئے ویب سائٹ بنانا ہے",
+        "answer": "میہال خٹک کی ٹیم آپ کے ڈینٹل کلینک کے لیے ایک بہترین اور موبائل فرینڈلی ویب سائٹ تیار کر سکتی ہے۔ کیا آپ ویب سائٹ پر مریضوں کے لیے آن لائن اپائنٹمنٹ بکنگ کی سہولت بھی شامل کرنا چاہتے ہیں؟ مزید معلومات کے لیے ہم سے واٹس ایپ نمبر 03302930930 پر رابطہ کریں۔",
+        "unanswered": true,
+        "timestamp": "2026-06-07T09:46:04.281Z"
+      },
+      {
+        "id": "q_nrzo02h",
+        "sessionId": "s_puf8qq1tblmq3jrk36",
+        "question": "جی میں کرنا چاہتا ہوں",
+        "answer": "بہت زبردست! میں آپ کی مدد کے لیے بالکل تیار ہوں۔ کیا آپ مجھے بتا سکتے ہیں کہ آپ کس قسم کا کاروبار کرتے ہیں تاکہ ہم اس کے مطابق بہترین حل تجویز کر سکیں؟",
+        "unanswered": false,
+        "timestamp": "2026-06-07T09:46:45.644Z"
+      },
+      {
+        "id": "q_q8cagqr",
+        "sessionId": "s_puf8qq1tblmq3jrk36",
+        "question": "ڈینٹل",
+        "answer": "میہال خٹک کی ٹیم ڈینٹل کلینکس کے لیے اے آئی اپائنٹمنٹ بکنگ اور کسٹمر سپورٹ سسٹمز فراہم کرتی ہے۔ کیا آپ فی الحال مریضوں کی بکنگ دستی طور پر کرتے ہیں یا اسے خودکار بنانا چاہتے ہیں؟",
+        "unanswered": false,
+        "timestamp": "2026-06-07T09:47:10.316Z"
+      },
+      {
+        "id": "q_mt2wc2s",
+        "sessionId": "s_puf8qq1tblmq3jrk36",
+        "question": "کار بنانا چاہتا ہوں",
+        "answer": "ہم فزیکل کاریں تو نہیں بناتے، لیکن اگر آپ کار کے کاروبار کے لیے کوئی ویب سائٹ، تھری ڈی ماڈلنگ ویب سائٹ یا کوئی خودکار سافٹ ویئر بنوانا چاہتے ہیں تو میہال خٹک آپ کی مدد کر سکتے ہیں۔ کیا آپ اپنے اس پروجیکٹ کے بارے میں مزید تفصیلات بتا سکتے ہیں؟ آپ ہم سے واٹس ایپ پر 03302930930 پر بھی رابطہ کر سکتے ہیں۔",
+        "unanswered": true,
+        "timestamp": "2026-06-07T09:47:51.108Z"
+      },
+      {
+        "id": "q_ixe0z9x",
+        "sessionId": "s_puf8qq1tblmq3jrk36",
+        "question": "اپنے پیکجز اور پرائسز بتائیں؟",
+        "answer": "قیمتیں آپ کی مخصوص ضروریات اور پراجیکٹ کے اسکوپ پر منحصر ہیں۔ تفصیلی قیمتوں، کسٹم کوٹیشنز، اور دستیاب ڈسکاؤنٹس کے لیے، براہ کرم ہماری ویب سائٹ وزٹ کریں یا براہ راست میہال خٹک (MEHAAL KHATTAK) سے رابطہ کریں۔",
+        "unanswered": true,
+        "timestamp": "2026-06-07T10:01:44.814Z"
+      },
+      {
+        "id": "q_cje2rzf",
+        "sessionId": "s_puf8qq1tblmq3jrk36",
+        "question": "hi",
+        "answer": "وعلیکم السلام! میں بالکل ٹھیک ہوں۔ میں میہال خٹک کا آفیشل صوتی سیلز ایجنٹ ہوں۔ کیا آپ اپنے کاروبار کو آٹومیٹ کرنا چاہتے ہیں یا ویب سائٹ بنوانا چاہتے ہیں؟",
+        "unanswered": false,
+        "timestamp": "2026-06-07T10:07:08.499Z"
+      },
+      {
+        "id": "q_nhe3hd4",
+        "sessionId": "s_puf8qq1tblmq3jrk36",
+        "clientLabel": "Client 1",
+        "clientIp": "223.123.94.112",
+        "question": "ہیلو، کیا یہ پرائس کنٹرول پینل سے لنکڈ ہے؟",
+        "answer": "وعلیکم السلام! میں بالکل ٹھیک ہوں۔ میں میہال خٹک کا آفیشل صوتی سیلز ایجنٹ ہوں۔ کیا آپ اپنے کاروبار کو آٹومیٹ کرنا چاہتے ہیں یا ویب سائٹ بنوانا چاہتے ہیں؟",
+        "unanswered": false,
+        "timestamp": "2026-06-07T10:22:28.248Z"
+      },
+      {
+        "id": "q_owptkgu",
+        "sessionId": "s_puf8qq1tblmq3jrk36",
+        "clientLabel": "Client 1",
+        "clientIp": "223.123.94.112",
+        "question": "واٹس ایپ آٹومیشن کا ورک فلو کیسے کام کرتا ہے؟",
+        "answer": "آٹومیشن کا مطلب ہے آپ کے کاروبار کے روزمرہ کے کاموں کو جیسے کسٹمرز کی کالز، ڈیٹا اینٹری یا ای میلز کو ٹیکنالوجی کے ذریعے خودکار بنانا تاکہ آپ کا قیمتی وقت اور اسٹاف کا خرچ بچ سکے۔ کیا آپ اپنے کاروبار میں کسی خاص ٹاسک کو آٹومیٹ کرنا چاہتے ہیں؟",
+        "unanswered": false,
+        "timestamp": "2026-06-07T10:22:48.494Z"
+      }
+    ],
+    "ipMappings": {
+      "223.123.94.112": "Client 1"
+    }
+  }
+}
